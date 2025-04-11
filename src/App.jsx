@@ -16,7 +16,7 @@ import "./App.css";
 
 import { Tabs, Tab } from "@mui/material";
 import Home from "./components/Home";
-import Account from "./components/Account";
+import News from "./components/News";
 import Schedules from "./components/Schedules";
 import Schedule from "./components/Schedule";
 import NoPage from "./components/404";
@@ -48,8 +48,8 @@ function DropDownComponent({ avatar }) {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
         <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}>Settings</MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
     </>
@@ -64,7 +64,7 @@ function App() {
     <>
       <Tabs value={currentPath}>
         <Tab label="Blindate" value="/" component={Link} to="/" />
-        <Tab label="Account" value="/account" component={Link} to="/account" />
+        <Tab label="News" value="/news" component={Link} to="/news" />
         <Tab
           label="Schedules"
           value="/schedules"
@@ -75,7 +75,7 @@ function App() {
       </Tabs>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/account" element={<Account />} />
+        <Route path="/news" element={<News />} />
         <Route path="/schedules" element={<Schedules />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="*" element={<NoPage />} />
