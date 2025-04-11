@@ -2,7 +2,7 @@ import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import Divider from "@mui/material/Divider";
+//import Divider from "@mui/material/Divider";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
@@ -39,7 +39,7 @@ export default function Schedules() {
           }
         />
       </ListItem>
-      <Divider variant="inset" component="li" />
+      {/* <Divider variant="inset" component="li" /> */}
       <ListItem
         sx={{ cursor: "pointer" }}
         alignItems="flex-start"
@@ -67,8 +67,12 @@ export default function Schedules() {
           }
         />
       </ListItem>
-      <Divider variant="inset" component="li" />
-      <ListItem alignItems="flex-start">
+      {/* <Divider variant="inset" component="li" /> */}
+      <ListItem
+        alignItems="flex-start"
+        sx={{ cursor: "pointer" }}
+        onClick={goToSchedule}
+      >
         <ListItemAvatar>
           <Avatar
             alt="Cindy Baker"
